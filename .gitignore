@@ -1,4 +1,5 @@
 # Intellij
+.attach*
 *target/
 *.idea/
 *.iml
