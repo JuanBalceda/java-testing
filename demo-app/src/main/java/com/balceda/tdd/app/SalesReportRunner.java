@@ -3,6 +3,7 @@ package com.balceda.tdd.app;
 import java.io.PrintStream;
 
 import com.balceda.tdd.repository.SalesRepository;
+import com.balceda.tdd.service.SalesAnalyser;
 
 public class SalesReportRunner {
     
@@ -21,7 +22,7 @@ public class SalesReportRunner {
     public void run(final String fileLocation){
 	SalesRepository repo = new SalesRepository(fileLocation);
 	SalesAnalyser analyser = new SalesAnalyser(repo);
-	SalesReport report = new SalesReport(analyser);
+	SalesReport report = new SalesReport(analyser, out);
 	report.run();
     }
 }
